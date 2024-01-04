@@ -14,7 +14,7 @@ pip --version
 python -V
 
 // check Flask version
-pip show flask
+flask --version
 ```
 
 ```js
