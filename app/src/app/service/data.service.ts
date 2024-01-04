@@ -14,7 +14,8 @@ interface Post {
 })
 export class DataService {
   mockApiUrl: string = 'https://jsonplaceholder.typicode.com/posts';
-  pythonApiUrl: string = 'http://127.0.0.1:5000/api/intro';
+  pythonApiUrlInto: string = 'http://127.0.0.1:5000/api/intro';
+  pythonApiUrlTasks: string = 'http://127.0.0.1:5000/api/tasks';
 
   constructor(private http: HttpClient) {}
 
@@ -22,7 +23,11 @@ export class DataService {
     return this.http.get<Post[]>(this.mockApiUrl);
   }
 
-  getPythonApiUrl(): Observable<Post[]> {
-    return this.http.get<Post[]>(this.pythonApiUrl);
+  getPythonApiUrlIntro(): Observable<Post[]> {
+    return this.http.get<Post[]>(this.pythonApiUrlInto);
+  }
+
+  getPythonApiUrlTasks(): Observable<any[]> {
+    return this.http.get<any[]>(this.pythonApiUrlTasks);
   }
 }
