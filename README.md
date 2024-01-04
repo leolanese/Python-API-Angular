@@ -41,3 +41,7 @@ cd AppProject/src/app
 
 ng serve --open --port 4200
 ```
+
+## Demo
+
+![Python](./src/assets/Python-API-Angular-Capture.jpg)
