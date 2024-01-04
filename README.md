@@ -7,6 +7,17 @@
 ## API Python
 
 ```js
+// check package installer for Python
+pip --version
+
+// check Phyton version
+python -V
+
+// check Flask version
+pip show flask
+```
+
+```js
 // RUN BACK-END
 // New-Item -ItemType File app.py
 // app.py
