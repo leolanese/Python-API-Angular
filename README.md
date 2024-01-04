@@ -44,4 +44,4 @@ ng serve --open --port 4200
 
 ## Demo
 
-![Python](./src/assets/Python-API-Angular-Capture.jpg)
+![Python](https://raw.githubusercontent.com/leolanese/Python-API-Angular/main/app/src/assets/Python-API-Angular-Capture.jpg)
