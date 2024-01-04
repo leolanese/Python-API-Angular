@@ -1,0 +1,40 @@
+<h1>Python-API-Angular</h1>
+
+<hr>
+
+<h2>Python Server API response</h2>
+<div *ngIf="message">
+  <p>{{ message.message }}</p>
+  <p>Status: {{ message.status }}</p>
+  <div *ngIf="message.data">
+    <h3>Data:</h3>
+    <ul>
+      <li *ngFor="let item of message.data | keyvalue">
+        {{ item.key }}: {{ item.value }}
+      </li>
+    </ul>
+  </div>
+</div>
+
+<hr>
+
+<h2>Mock Server API response</h2>
+
+<div *ngIf="errorMessage">
+  <p>Error: {{ errorMessage }}</p>
+</div>
+
+<table>
+  <tr>
+    <th>id</th>
+    <th>title</th>
+    <th>body</th>
+  </tr>
+  <tr *ngFor="let post of posts">
+    <td>{{post.id}}</td>
+    <td>{{post.title}}</td>
+    <td>{{post.body}}</td>
+  </tr>
+  <tr>
+</table>
+
