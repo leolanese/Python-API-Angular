@@ -3,8 +3,9 @@
 <hr>
 
 <h2>Python Server API response</h2>
+<button (click)="onGetPythonApiUrlIntro()">loadPythonData</button>
 <div *ngIf="message">
-  <p>{{ message.message }}</p>
+  <p>{{ message | json }}</p>
   <p>Status: {{ message.status }}</p>
   <div *ngIf="message.data">
     <h3>Data:</h3>
@@ -17,13 +18,27 @@
 </div>
 
 <hr>
+<h2>Render template - API Get Request</h2>
+<button (click)="onGetPythonApiUrlTasks()">loadMockData</button>
+<div *ngIf="task">
+  {{ task | json }}
 
-<h2>Mock Server API response</h2>
-
-<div *ngIf="errorMessage">
-  <p>Error: {{ errorMessage }}</p>
+  <div *ngFor="let taskItem of task">
+    <ul>
+      <li>
+        <p>ID: {{ taskItem.id }}</p>
+        <p>Title: {{ taskItem.title }}</p>
+        <p>Description: {{ taskItem.description }}</p>
+        <p>Done: {{ taskItem.done }}</p>
+        <hr>
+      </li>
+    </ul>
+  </div>
 </div>
 
+<hr>
+<h2>Mock Server API response</h2>
+<button (click)="onGetMockApiUrl()">loadMockData</button>
 <table>
   <tr>
     <th>id</th>
@@ -37,4 +52,5 @@
   </tr>
   <tr>
 </table>
+
 
