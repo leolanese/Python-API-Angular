@@ -14,8 +14,8 @@ interface Post {
 })
 export class DataService {
   mockApiUrl: string = 'https://jsonplaceholder.typicode.com/posts';
-  pythonApiUrlInto: string = 'http://127.0.0.1:5000/api/intro';
-  pythonApiUrlTasks: string = 'http://127.0.0.1:5000/api/tasks';
+  pythonApiUrlInto: string = 'http://localhost:8000/api/intro';
+  pythonApiUrlTasks: string = 'http://localhost:8000/api/tasks';
 
   constructor(private http: HttpClient) {}
 
